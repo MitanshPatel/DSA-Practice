@@ -24,7 +24,7 @@ vector<int> divisibleSet(vector<int>& arr) {
     sort(arr.begin(), arr.end());
 
     vector<int> dp(n, 1);   // dp[i] stores the length of the divisible subset ending at arr[i]
-    vector<int> hash(n, i); // hash[i] stores the previous index in the divisible subset ending at arr[i]
+    vector<int> hash(n, 0); // hash[i] stores the previous index in the divisible subset ending at arr[i]
 
     for (int i = 0; i < n; i++) {
         hash[i] = i; // Initialize with the current index
